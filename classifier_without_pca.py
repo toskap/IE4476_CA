@@ -109,8 +109,7 @@ with torch.no_grad():
     # Confusion matrix
     cm = confusion_matrix(y_true, y_pred_classes)
     plt.figure(figsize=(8,8), constrained_layout=True)
-    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues",
-                xticklabels=class_names, yticklabels=class_names)
+    sns.heatmap(cm, annot=True, fmt="d", cmap="Oranges", xticklabels=class_names, yticklabels=class_names)
     plt.xlabel("Predicted", fontsize=10)
     plt.ylabel("True", fontsize=10)
     plt.title("Confusion Matrix: Linear Classification without PCA", fontsize=12)

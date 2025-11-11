@@ -1,14 +1,15 @@
 import matplotlib.pyplot as plt
+import tkinter as tk
 
 
 components = ['No PCA (12288)', 'PCA 10', 'PCA 50', 'PCA 100', 'PCA 200', 'PCA 300', 'PCA 400', 'PCA 500', 'PCA 600', 'PCA 1000']
-accuracies = [0.3957, 0.3382, 0.3767, 0.3976, 0.4034, 0.3972, 0.3968, 0.3957, 0.3928, 0.3957]
+accuracies = [0.3939, 0.3382, 0.3767, 0.3976, 0.3998, 0.3972, 0.3968, 0.3965, 0.3928, 0.3957]
 
 
 plt.figure(figsize=(9,8))
-bars = plt.bar(components, accuracies, color='teal', alpha=0.8)
-bars[0].set_color('red')
-plt.axhline(y=accuracies[0], color='red', linestyle='--', linewidth=1.5)
+bars = plt.bar(components, accuracies, color='orange', alpha=0.8)
+bars[0].set_color('#cd3700')
+plt.axhline(y=accuracies[0], color='#cd3700', linestyle='--', linewidth=1.5)
 
 plt.title("Classification Accuracy vs number of PCA Components", fontsize=12)
 plt.xlabel("Number of PCA Components", fontsize=11)
